@@ -1,0 +1,56 @@
+{
+    "Center Line(s)": {
+        "prefix": ".ce",
+        "body": [
+            ".ce ${1:NUMBER}",
+            "${2:TEXT}"
+        ],
+        "description": "Centers X Given Lines"
+    },
+    "Title": {
+        "prefix": ".tl",
+        "body": [
+            ".tl '${1:LEFT}'${2:CENTER}'${3:RIGHT}'"
+        ],
+        "description": "Creates a Title"
+    },
+    "Empty Line(s)": {
+        "prefix": ".el",
+        "body": [
+            ".el ${1:NUMBER}"
+        ],
+        "description": "Adds X Empty Lines"
+    },
+    "Paragraph": {
+        "prefix": ".ph",
+        "body": [
+            ".ph",
+            "${1:Text}",
+            ""
+        ],
+        "description": "Creates a Paragraph"
+    },
+    "Register": {
+        "prefix": ".nr",
+        "body": [
+            ".nr ${1:IDENTIFIER} ${2:VALUE}"
+        ],
+        "description": "Create new Register"
+    },
+    "User Register": {
+        "prefix": "$",
+        "body": [
+            "$(${1:IDENTIFIER})"
+        ],
+        "description": "User value of a Register"
+    },
+    "Comment Block": {
+        "prefix": "/\\*\\*",
+        "body": [
+            "/**",
+            " * $1",
+            " */"
+        ],
+        "description": "Create Comment block"
+    }
+}

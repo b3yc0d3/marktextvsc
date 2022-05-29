@@ -1,0 +1,117 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Marktext Linter",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#special"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash",
+                    "match": "\\/\\/.*"
+                },
+                {
+                    "name": "comment.block",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "special": {
+            "patterns": [
+                {
+                    "name": "support.function",
+                    "match": "\\s*\\$\\(\\s*(([A-Z_]+))\\s*\\)\\s*",
+                    "captures": {
+                        "1": {
+                            "name": "markup.italic"
+                        },
+                        "2": {
+                            "name": "variable.name"
+                        }
+                    }
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "^\\.[nr] ([A-Z_]{2,}+)",
+                    "captures": {
+                        "1": {
+                            "name": "variable.name"
+                        }
+                    }
+                },
+                {
+                    "name": "keyword.control",
+                    "match": " '(.*)'(.*)'(.*)'",
+                    "captures": {
+                        "1": {
+                            "name": "string.unquoted",
+                            "patterns": [
+                                {
+                                    "include": "#special"
+                                }
+                            ]
+                        },
+                        "2": {
+                            "name": "string.unquoted",
+                            "patterns": [
+                                {
+                                    "include": "#special"
+                                }
+                            ]
+                        },
+                        "3": {
+                            "name": "string.unquoted",
+                            "patterns": [
+                                {
+                                    "include": "#special"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "match": "\\.([a-z]+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control"
+                        }
+                    }
+                }
+            ]
+        },
+        "strings": {
+            "begin": "\"",
+            "end": "\"",
+            "name": "string.quoted.double",
+            "patterns": [
+                {
+                    "include": "#special"
+                }
+            ]
+        },
+        "numbers": {
+            "match": "[0-9]+",
+            "name": "constant.numeric"
+        }
+    },
+    "scopeName": "source.marktext"
+}

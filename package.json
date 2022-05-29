@@ -1,0 +1,57 @@
+{
+    "name": "marktext",
+    "displayName": "Marktext",
+    "description": "Syntax Highlighter for Marktext",
+    "version": "0.0.1",
+    "publisher": "b3yc0d3",
+    "icon": "icon.png",
+    "license": "MIT License",
+    "keywords": [
+        "marktext"
+    ],
+    "author": {
+        "name": "b3yc0d3",
+        "email": "b3yc0d3@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/b3yc0d3/marktextvsc"
+    },
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "categories": [
+        "Formatters",
+        "Linters",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "marktext",
+                "aliases": [
+                    "Marktext",
+                    "marktext"
+                ],
+                "extensions": [
+                    ".mt",
+                    ".mtt"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "marktext",
+                "scopeName": "source.marktext",
+                "path": "./syntaxes/marktext.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "marktext",
+                "path": "./snippets.json"
+            }
+        ]
+    }
+}
