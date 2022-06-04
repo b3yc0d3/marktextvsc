@@ -1,6 +1,9 @@
 {
     "Center Line(s)": {
-        "prefix": ".ce",
+        "scope": "marktext",
+        "prefix": [
+            ".ce"
+        ],
         "body": [
             ".ce ${1:NUMBER}",
             "${2:TEXT}"
@@ -8,43 +11,70 @@
         "description": "Centers X Given Lines"
     },
     "Title": {
-        "prefix": ".tl",
+        "scope": "marktext",
+        "prefix": [
+            ".tl"
+        ],
         "body": [
             ".tl '${1:LEFT}'${2:CENTER}'${3:RIGHT}'"
         ],
         "description": "Creates a Title"
     },
     "Empty Line(s)": {
-        "prefix": ".el",
+        "scope": "marktext",
+        "prefix": [
+            ".el"
+        ],
         "body": [
             ".el ${1:NUMBER}"
         ],
         "description": "Adds X Empty Lines"
     },
     "Paragraph": {
-        "prefix": ".ph",
+        "scope": "marktext",
+        "prefix": [
+            ".ph"
+        ],
         "body": [
             ".ph",
-            "${1:Text}",
+            "${1:TEXT}",
             ""
         ],
         "description": "Creates a Paragraph"
     },
     "Register": {
-        "prefix": ".nr",
+        "scope": "marktext",
+        "prefix": [
+            ".nr"
+        ],
         "body": [
             ".nr ${1:IDENTIFIER} ${2:VALUE}"
         ],
         "description": "Create new Register"
     },
-    "User Register": {
-        "prefix": "$",
+    "Placeholder": {
+        "scope": "marktext",
+        "prefix": [
+            "\\$",
+            "$("
+        ],
         "body": [
             "$(${1:IDENTIFIER})"
         ],
-        "description": "User value of a Register"
+        "description": "User value stored in register"
+    },
+    "Header": {
+        "scope": "marktext",
+        "prefix": [
+            ".hr"
+        ],
+        "body": [
+            ".hr ${1:LEVEL}",
+            "${2:TITLE}"
+        ]
     },
     "Comment Block": {
+        "scope": "marktext",
         "prefix": "/\\*\\*",
         "body": [
             "/**",

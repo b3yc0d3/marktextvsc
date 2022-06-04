@@ -1,0 +1,106 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Marktext",
+    "patterns": [
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#placeholder"
+        },
+        {
+            "include": "#comments"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.marktext",
+                    "match": ".*\\/\\/.*"
+                },
+                {
+                    "name": "comment.block.marktext",
+                    "begin": "/./\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "placeholder": {
+            "patterns": [
+                {
+                    "name": "support.function.marktext",
+                    "match": "\\s*\\$\\(((?![0-9])[A-Z0-9_]+)\\)",
+                    "captures": {
+                        "1": {
+                            "name": "variable.name.marktext"
+                        }
+                    }
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.marktext",
+                    "match": "^\\.tl*\\s+('[^']*'[^']*'[^']*')",
+                    "captures": {
+                        "1": {
+                            "name": "string.unquoted.marktext",
+                            "patterns": [
+                                {
+                                    "include": "#placeholder"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "keyword.control.marktext",
+                    "match": "^\\.(nr)\\s((?![0-9])[A-Z0-9_]+)",
+                    "captures": {
+                        "2": {
+                            "name": "variable.name.marktext"
+                        }
+                    }
+                },
+                {
+                    "name": "keyword.control.marktext",
+                    "match": "^\\.(ce|el|tl|nr|hr|ph)"
+                }
+            ]
+        },
+        "strings": {
+            "begin": "\"",
+            "end": "\"",
+            "name": "string.quoted.double",
+            "patterns": [
+                {
+                    "include": "#placeholder"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "match": "^\\.(ce|el|nr|hr).*\\s+(\\d+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.control.marktext"
+                        },
+                        "2": {
+                            "name": "constant.numeric.marktext"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "scopeName": "source.marktext"
+}

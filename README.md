@@ -1,14 +1,13 @@
-# marktext
+# Marktext Syntax Highlighting
 
-This is the Syntax Highlighter for Marktext.
+This is the Syntax Highlighting for [Marktext](https://github.com/b3yc0d3/marktext).
 
 ## Features
+- Command Word completion
+- Syntax Highlighting
 
-Marktext can currently only Highlight the syntax.<br>
-LSP Server may be added in the Future
+(*LSP Server may be added in the Future.*)
 
-## Release Notes
+<img src="./img_01.png" height="200px"><br>
+<img src="./img_02.png" height="200px">
 
-### 0.0.1
-
-Added basic Highlight functionality

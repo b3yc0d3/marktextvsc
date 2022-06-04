@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180"
+   height="180"
+   viewBox="0 0 180 180"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/nikinik/Documents/projects/marktextvsc/icons/logo.png"
+   inkscape:export-xdpi="68.26667"
+   inkscape:export-ydpi="68.26667"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="3.3862557"
+     inkscape:cx="106.45977"
+     inkscape:cy="93.466066"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="true" />
+  <defs
+     id="defs2">
+    <filter
+       inkscape:menu-tooltip="In and out glow with a possible offset and colorizable flood"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Cutout Glow"
+       style="color-interpolation-filters:sRGB;"
+       id="filter8704"
+       x="-1.0037876"
+       y="-2.174875"
+       width="2.0040285"
+       height="3.1753969">
+      <feOffset
+         dy="-100"
+         dx="-100"
+         id="feOffset8694" />
+      <feGaussianBlur
+         stdDeviation="0.01"
+         result="blur"
+         id="feGaussianBlur8696" />
+      <feFlood
+         flood-color="rgb(38,162,105)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood8698" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="out"
+         result="composite"
+         id="feComposite8700" />
+      <feBlend
+         in="blur"
+         in2="composite"
+         mode="normal"
+         id="feBlend8702" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.88276;stroke-linecap:round;paint-order:stroke fill markers"
+       id="rect991"
+       width="141.69266"
+       height="77.371651"
+       x="19.153671"
+       y="51.314175" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:5.92283;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect3330"
+       width="144.07716"
+       height="79.154167"
+       x="17.961418"
+       y="50.422916"
+       ry="7.6590271" />
+    <g
+       id="g46515"
+       transform="translate(219.99703,-82.306713)">
+      <g
+         id="g46509">
+        <rect
+           style="fill:#617bb9;fill-opacity:1;stroke-width:50.5082;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect45470"
+           width="96"
+           height="78"
+           x="14.923021"
+           y="51" />
+        <path
+           d="M 105.17943,121.81766 95.60678,58.000002 H 78.102507 L 62.968605,92.735043 47.925871,58.000002 H 30.33043 L 20.666613,121.81766 H 38.535558 L 43.458635,85.168092 60.32473,122 h 5.196581 l 16.957265,-36.923077 4.923076,36.740737 z"
+           style="font-weight:bold;font-size:82.2939px;line-height:1.25;font-family:Mont;-inkscape-font-specification:'Mont Bold';fill:#ffffff;fill-opacity:1;stroke-width:2.2792"
+           id="path27834" />
+      </g>
+      <path
+         d="m 145.7037,107.04844 c -3.55556,0 -5.74359,-2.18804 -5.74359,-5.65242 V 85.715103 h 11.94302 V 72.586898 h -12.3077 v -14.31339 h -3.55555 L 113.9772,81.703707 v 4.011396 h 9.02564 v 18.507127 c 0,10.94017 6.65527,17.59544 17.50427,17.59544 h 11.66952 v -14.76923 z"
+         style="font-weight:900;font-size:40px;line-height:1.25;font-family:Mont;-inkscape-font-specification:'Mont Heavy';fill:#ffffff;fill-opacity:1;stroke-width:2.2792"
+         id="path42190" />
+    </g>
+    <path
+       d="M 102.5887,116.38722 94.649846,63.461563 H 80.133094 L 67.582151,92.268243 55.106817,63.461563 H 40.514457 L 32.5,116.38722 h 14.819185 l 4.082836,-30.394447 13.987496,30.545667 h 4.309661 l 14.063103,-30.621275 4.082838,30.470055 z"
+       style="font-weight:bold;font-size:84.1551px;line-height:1.25;font-family:Mont;-inkscape-font-specification:'Mont Bold';fill:#000000;fill-opacity:1;stroke-width:1.8902"
+       id="path7230" />
+    <path
+       d="M 147.5,63.461563 H 104.10096 V 76.61737 h 14.36553 v 39.76985 h 14.66797 V 76.61737 H 147.5 Z"
+       style="font-weight:bold;font-size:84.1551px;line-height:1.25;font-family:Mont;-inkscape-font-specification:'Mont Bold';fill:#000000;fill-opacity:1;stroke-width:1.8902"
+       id="path7232" />
+  </g>
+</svg>

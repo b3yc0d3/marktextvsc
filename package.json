@@ -2,10 +2,10 @@
     "name": "marktext",
     "displayName": "Marktext",
     "description": "Syntax Highlighter for Marktext",
-    "version": "0.0.1",
+    "version": "0.1.1",
     "publisher": "b3yc0d3",
-    "icon": "icon.png",
-    "license": "MIT License",
+    "icon": "icons/logo.png",
+    "license": "MIT",
     "keywords": [
         "marktext"
     ],
@@ -23,35 +23,53 @@
     "categories": [
         "Formatters",
         "Linters",
-        "Snippets"
+        "Snippets",
+        "Other"
     ],
     "contributes": {
         "languages": [
             {
                 "id": "marktext",
+                "icon": {
+                    "dark": "./icons/marktext-light.png",
+                    "light": "./icons/marktext-light.png"
+                },
                 "aliases": [
                     "Marktext",
-                    "marktext"
+                    "marktext",
+                    "mt"
                 ],
                 "extensions": [
                     ".mt",
                     ".mtt"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "language-configuration.json"
             }
         ],
         "grammars": [
             {
                 "language": "marktext",
                 "scopeName": "source.marktext",
-                "path": "./syntaxes/marktext.json"
-            }
-        ],
-        "snippets": [
-            {
-                "language": "marktext",
-                "path": "./snippets.json"
+                "path": "./syntaxes/marktext.tmLanguage.json"
             }
         ]
+    },
+    "activationEvents": [
+        "onLanguage:marktext"
+    ],
+    "main": "./out/main.js",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext ts"
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.7",
+        "@types/vscode": "^1.32.0",
+        "@typescript-eslint/eslint-plugin": "^5.19.0",
+        "@typescript-eslint/parser": "^5.19.0",
+        "eslint": "^8.13.0",
+        "typescript": "^4.7.2"
     }
 }
