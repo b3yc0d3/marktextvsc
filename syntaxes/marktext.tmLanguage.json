@@ -22,8 +22,15 @@
         "comments": {
             "patterns": [
                 {
-                    "name": "comment.line.double-slash.marktext",
-                    "match": ".*\\/\\/.*"
+                    "match": "(\/\/)(.*)$",
+                    "captures": {
+                        "1": {
+                            "name": "comment.line.double-slash.marktext"
+                        },
+                        "2": {
+                            "name": "comment.line.double-slash.marktext"
+                        }
+                    }
                 },
                 {
                     "name": "comment.block.marktext",
@@ -35,11 +42,16 @@
         "placeholder": {
             "patterns": [
                 {
-                    "name": "support.function.marktext",
-                    "match": "\\s*\\$\\(((?![0-9])[A-Z0-9_]+)\\)",
+                    "match": "\\s*(\\$\\()((?![0-9])[A-Z0-9_]+)(\\))",
                     "captures": {
                         "1": {
+                            "name": "variable.function.marktext"
+                        },
+                        "2": {
                             "name": "variable.name.marktext"
+                        },
+                        "3": {
+                            "name": "variable.function.marktext"
                         }
                     }
                 }
@@ -72,7 +84,7 @@
                 },
                 {
                     "name": "keyword.control.marktext",
-                    "match": "^\\.(ce|el|tl|nr|hr|ph)"
+                    "match": "^\\.(ce|el|tl|nr|hr|ph|nf)"
                 }
             ]
         },

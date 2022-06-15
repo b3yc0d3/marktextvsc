@@ -68,10 +68,20 @@ function activate(context: vscode.ExtensionContext) {
                 snipCom_NR_doc.appendCodeblock(".nr PAGES 69          // Stores numbers");
                 snipCom_NR.documentation = snipCom_NR_doc;
 
+                // No Formatting (.nf <VALUE>)
+                const snipCom_NF = new vscode.CompletionItem('nf', vscode.CompletionItemKind.Function);
+                snipCom_NF.detail = "(command word) .nf  \n<value>";
+                snipCom_NF.insertText = new vscode.SnippetString('nf\n${1:value}');
+                const snipCom_NF_doc = new vscode.MarkdownString("Create a Paragraph like text, without automatic formatting\n\n");
+                snipCom_NF_doc.appendMarkdown("**Args:**  \n`value` can contain any valid UTF-8 character\n\n");
+                snipCom_NF_doc.appendMarkdown("**Example:**");
+                snipCom_NF_doc.appendCodeblock(".nf  \nThis is none formatted text.");
+                snipCom_NF.documentation = snipCom_NF_doc;
+
 
                 // Paragraph (.ph <VALUE>)
                 const snipCom_PH = new vscode.CompletionItem('ph', vscode.CompletionItemKind.Function);
-                snipCom_PH.detail = "(command word) .p  \n<value>";
+                snipCom_PH.detail = "(command word) .ph  \n<value>";
                 snipCom_PH.insertText = new vscode.SnippetString('ph\n${1:value}');
                 const snipCom_PH_doc = new vscode.MarkdownString("Create a Paragraph\n\n");
                 snipCom_PH_doc.appendMarkdown("**Args:**  \n`value` can contain any valid UTF-8 character\n\n");
@@ -102,6 +112,7 @@ function activate(context: vscode.ExtensionContext) {
                     snipCom_EL,
                     snipCom_HR,
                     snipCom_NR,
+                    snipCom_NF,
                     snipCom_PH,
                     snipCom_TL
                 ];

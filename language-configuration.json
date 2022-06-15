@@ -1,4 +1,10 @@
 {
+    "brackets": [
+        [
+            "(",
+            ")"
+        ]
+    ],
     "comments": {
         "lineComment": "//",
         "blockComment": [

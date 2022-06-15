@@ -2,7 +2,7 @@
     "name": "marktext",
     "displayName": "Marktext",
     "description": "Syntax Highlighter for Marktext",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "publisher": "b3yc0d3",
     "icon": "icons/logo.png",
     "license": "MIT",
